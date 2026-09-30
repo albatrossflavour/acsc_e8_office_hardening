@@ -343,6 +343,48 @@ acsc_e8_office_hardening::macros::all_disabled:
 ########## All macros disabled ################
 
 ############### Trusted locations #################
+  ############# Added in the albatrossflavour fork ##################
+  # ACSC Essential Eight Maturity Level 1 lists internet macro blocking and
+  # macro antivirus scanning as requirements of their own. The other two modes
+  # set both; all_disabled did not, so the strictest mode failed a line-by-line
+  # ML1 check. Values match the other modes, so switching between modes leaves
+  # these in place.
+  software\policies\microsoft\office\16.0\common\security\macroruntimescanscope:
+    class: 'user'
+    key: 'software\policies\microsoft\office\16.0\common\security'
+    value: 'macroruntimescanscope'
+    type: 'dword'
+    data: '2'
+  software\policies\microsoft\office\16.0\excel\security\blockcontentexecutionfrominternet:
+    class: 'user'
+    key: 'software\policies\microsoft\office\16.0\excel\security'
+    value: 'blockcontentexecutionfrominternet'
+    type: 'dword'
+    data: '1'
+  software\policies\microsoft\office\16.0\word\security\blockcontentexecutionfrominternet:
+    class: 'user'
+    key: 'software\policies\microsoft\office\16.0\word\security'
+    value: 'blockcontentexecutionfrominternet'
+    type: 'dword'
+    data: '1'
+  software\policies\microsoft\office\16.0\access\security\blockcontentexecutionfrominternet:
+    class: 'user'
+    key: 'software\policies\microsoft\office\16.0\access\security'
+    value: 'blockcontentexecutionfrominternet'
+    type: 'dword'
+    data: '1'
+  software\policies\microsoft\office\16.0\powerpoint\security\blockcontentexecutionfrominternet:
+    class: 'user'
+    key: 'software\policies\microsoft\office\16.0\powerpoint\security'
+    value: 'blockcontentexecutionfrominternet'
+    type: 'dword'
+    data: '1'
+  software\policies\microsoft\office\16.0\visio\security\blockcontentexecutionfrominternet:
+    class: 'user'
+    key: 'software\policies\microsoft\office\16.0\visio\security'
+    value: 'blockcontentexecutionfrominternet'
+    type: 'dword'
+    data: '1'
 acsc_e8_office_hardening::macros::trusted_locations:
   software\policies\microsoft\office\common\security\automationsecurity:
     class: 'user'

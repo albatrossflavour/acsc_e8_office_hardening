@@ -2,6 +2,13 @@
 
 Automate the enforcement of the ACSC essential eight Microsoft office macro security. 
 
+This is a fork of [benjamin-robertson/acsc_e8_office_hardening](https://github.com/benjamin-robertson/acsc_e8_office_hardening), made with Ben's agreement. It differs in two ways:
+
+* `all_macros_disabled` also sets `blockcontentexecutionfrominternet` for Excel, Word, Access, PowerPoint and Visio, and `macroruntimescanscope`. The other two restricting modes already did, and ACSC Essential Eight Maturity Level 1 lists both as requirements.
+* It accepts `puppetlabs/registry` up to 6.x and `puppetlabs/stdlib` up to 10.x.
+
+The default mode, `clear_macro_settings`, removes every setting this module has written, so classifying the module with no parameters leaves macros unrestricted.
+
 The module will restrict the use of macros within Office. 
 
 There are 4 operating modes

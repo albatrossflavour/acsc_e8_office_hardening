@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 1.1.0
+
+Fork of benjamin-robertson/acsc_e8_office_hardening.
+
+**Features**
+
+  - `all_macros_disabled` sets `blockcontentexecutionfrominternet` for Excel, Word, Access, PowerPoint and Visio, and `macroruntimescanscope`, as the other two restricting modes do. ACSC Essential Eight Maturity Level 1 lists both.
+  - Supports `puppetlabs/registry` 6.x and `puppetlabs/stdlib` 10.x.
+
 ## Release 1.0.0
 
 **Features**
